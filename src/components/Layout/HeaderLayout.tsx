@@ -6,9 +6,9 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import { Button, Flex, Image } from "antd";
+import Search from "antd/es/input/Search";
 import { Header } from "antd/es/layout/layout";
 import { NavItemModel } from "./NavItemModel.ts";
-import Search from "antd/es/input/Search";
 import NavItems from "./NavItems.tsx";
 
 export default function HeaderLayout() {
@@ -72,7 +72,7 @@ export default function HeaderLayout() {
               />
               <Button
                 type="text"
-                className="bg-buy-500 hover:bg-buy-700 rounded-full"
+                className="bg-buy-500 hover:!bg-buy-700 rounded-full"
                 href={"/buy"}
               >
                 <span>
@@ -82,16 +82,14 @@ export default function HeaderLayout() {
               </Button>
               <Button
                 type="link"
-                className="text-textGrey-800 pb-3 border border-borderColor rounded-full"
-              >
-                <ShoppingOutlined className="text-xl" />
-              </Button>
+                className="text-textGrey-800 border border-borderColor rounded-full"
+                icon={<ShoppingOutlined />}
+              ></Button>
               <Button
                 type="link"
-                className="text-textGrey-800 pb-3 border border-borderColor rounded-full"
-              >
-                <UserOutlined className="text-xl" />
-              </Button>
+                className="text-textGrey-800 border border-borderColor rounded-full"
+                icon={<UserOutlined />}
+              ></Button>
             </Flex>
           </Flex>
         </Flex>
